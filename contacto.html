@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #011C30; color: white; }
+        .nav { text-align: left; margin-bottom: 20px; padding: 10px; }
+        .nav button { padding: 10px 20px; background-color: #FFD700; color: #011C30; border: none; cursor: pointer; font-size: 1em; }
+        .nav button:hover { background-color: #FFC107; }
+        .container { width: 80%; margin: auto; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        h1 { color: #FFD700; font-size: 3em; font-weight: bold; text-align: center; }
+        .content { display: flex; justify-content: space-between; width: 100%; margin-top: 20px; }
+        .left-container { flex: 1; padding-right: 40px; text-align: left; }
+        .contact-info { margin-top: 20px; }
+        .contact-info div { margin: 10px 0; }
+        .contact-info img { vertical-align: middle; margin-right: 10px; }
+        .form-container { flex: 1.5; padding-left: 40px; }
+        .form-container form { display: flex; flex-direction: column; }
+        .form-container input, .form-container textarea { margin: 10px 0; padding: 15px; border: none; border-radius: 5px; font-size: 1em; }
+        .form-container button { padding: 15px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; font-size: 1.2em; }
+        .form-container button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <button onclick="window.location.href='/'">Inicio</button>
+    </div>
+    <div class="container">
+        <h1>Contacto</h1>
+        <div class="content">
+            <div class="left-container">
+                <p>Estamos aquí para ayudarte. Puedes ponerte en contacto con nosotros a través de los siguientes medios:</p>
+                <p>Utiliza las siguientes vías de contacto, o rellena el formulario.</p>
+                <div class="contact-info">
+                    <div><img src="https://th.bing.com/th/id/R.450cf00e47d12142699c25cbd0287459?rik=YjcjSWFhruWUsw&pid=ImgRaw&r=0" alt="Teléfono" width="20"> 3208606464</div>
+                    <div><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="20"> Salud_inteligente</div>
+                    <div><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="20"> Salud_inteligente</div>
+                    <div><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail" width="20"> saludinteligente@gmail.com</div>
+                </div>
+            </div>
+            <div class="form-container">
+                <form>
+                    <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required>
+                    <input type="email" id="email" name="email" placeholder="Escribe tu Gmail" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Escribe tu teléfono (opcional)">
+                    <textarea id="message" name="message" rows="7" placeholder="Escribe tu mensaje" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #011C30; color: white; }
+        .nav { text-align: left; margin-bottom: 20px; padding: 10px; }
+        .nav button { padding: 10px 20px; background-color: #FFD700; color: #011C30; border: none; cursor: pointer; font-size: 1em; }
+        .nav button:hover { background-color: #FFC107; }
+        .container { width: 80%; margin: auto; padding: 20px; display: flex; align-items: center; }
+        .text-container { flex: 1; text-align: left; }
+        h1 { color: #FFD700; font-size: 3em; }
+        p { font-size: 1.2em; }
+        .button-container { margin-top: 20px; }
+        .button-container button { padding: 10px 20px; background-color: #FFD700; color: #011C30; border: none; cursor: pointer; font-size: 1.2em; }
+        .button-container button:hover { background-color: #FFC107; }
+        .image-container { flex: 1; text-align: right; }
+        .image-container img { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <button onclick="window.location.href='/'">Inicio</button>
+        <button onclick="window.location.href='/contacto'">Contacto</button>
+    </div>
+    <div class="container">
+        <div class="text-container">
+            <h1>Diagnóstico</h1>
+            <p>Selecciona un síntoma y responde a las preguntas para recibir una recomendación.</p>
+            <div class="button-container">
+                <button id="headacheButton">Dolor de Cabeza</button>
+                <button id="covidButton">COVID</button>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://img-cdn.pixlr.com/image-generator/history/675b6ab145e989a3f203ec16/c78352ef-b78b-4b84-8ebd-dc3d2c75f6e9/preview.webp" alt="Diagnóstico de Enfermedades">
+        </div>
+    </div>
+    <p style="text-align: center; font-size: 0.9em; color: #FFD700; margin-top: 20px;">
+        Nota: El diagnóstico proporcionado por esta página no sustituye la consulta con un médico. Siempre consulte a un profesional de la salud para obtener un diagnóstico y tratamiento adecuados. Esta página no se responsabiliza por cualquier acción tomada basada en la información proporcionada.
+    </p>
+    <script>
+        document.getElementById('headacheButton').addEventListener('click', function() {
+            let question1 = prompt("¿Dónde sientes el dolor de cabeza?\n1. En un lado de la cabeza\n2. En toda la cabeza");
+            let question2 = prompt("¿El dolor de cabeza es acompañado de otros síntomas como náuseas o sensibilidad a la luz?\n1. Sí\n2. No");
+            if (question1 == "1" && question2 == "1") {
+                alert("Podría ser una migraña. Te recomiendo descansar en un lugar oscuro y tranquilo, y consultar a un médico si el dolor persiste.");
+            } else if (question1 == "2" && question2 == "2") {
+                alert("Podría ser un dolor de cabeza tensional. Intenta relajarte, beber agua y descansar. Si el dolor persiste, consulta a un médico.");
+            } else {
+                alert("Para un diagnóstico más preciso, consulta a un médico.");
+            }
+        });
+
+        document.getElementById('covidButton').addEventListener('click', function() {
+            let question1 = prompt("¿Tienes fiebre?\n1. Sí\n2. No");
+            let question2 = prompt("¿Tienes dificultad para respirar o pérdida del olfato/gusto?\n1. Sí\n2. No");
+            if (question1 == "1" && question2 == "1") {
+                alert("Podrías tener COVID-19. Te recomiendo aislarte y hacerte una prueba de COVID-19 lo antes posible.");
+            } else if (question1 == "2" && question2 == "2") {
+                alert("Podría ser un resfriado común. Descansa, mantente hidratado y consulta a un médico si los síntomas empeoran.");
+            } else {
+                alert("Para un diagnóstico más preciso, consulta a un médico.");
+            }
+        });
+    </script>
+</body>
+</html>
